@@ -1,0 +1,231 @@
+/*1024-1199 */
+@media (max-width: 74.99rem) {
+    #first{
+        background-image: url(assets/wallpapaer-kazay-responsivity.png)center center;
+    }
+    .second_container{
+        width: 55rem;
+        padding: .1rem 2rem;
+    }
+    .display_container{
+        height: 21rem;
+    }
+    .display_container div {
+        height: 20.5rem;
+    }
+
+    .contacts_container{
+        width: 60%;
+    }
+
+    .second_container a{
+        background-color: var(--yellow);
+            color: black;
+            font-weight: 600;
+
+    }
+    /*----------------------------------------*/
+    .third_container{
+        width: 55rem;
+        padding: .1rem 2rem;
+    }
+    /*----------------------------------------*/
+    .up_contacts_container{
+        width: 60rem;
+    }
+    .adress a {
+        min-width: 20rem;
+        max-width: 28rem;
+    }
+}
+/*768-1023 */
+@media (max-width: 63.99rem){
+    .menu{
+        justify-content: space-evenly;
+    }
+    .second_container{
+        width: 45rem;
+        padding: .1rem 2rem;
+    }
+    .display_container{
+        height: 17.5rem;
+    }
+    .display_container div {
+        height: 17rem;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .display_container div p{
+        display: flex;
+    }
+    .display_container div:hover {
+        transform: none;
+    }
+    .display_container div:hover img{
+        transform: none;
+    }
+    .display_container div:hover p{
+        transform: none;
+        animation: none;
+    }
+
+    .contacts_container{
+        width: 60%;
+    }
+
+    .second_container a{
+        background-color: var(--yellow);
+            color: black;
+            font-weight: 600;
+
+    }
+    .second_container a:hover{
+        transform: none;
+    }
+    /*----------------------------------------*/
+    .third_container{
+        width: 45rem;
+        padding: .1rem 2rem;
+    }
+    /*----------------------------------------*/
+    .up_contacts_container{
+        width: 45rem;
+    }
+    .adress a {
+        width: 15rem;
+    }
+}
+/*480-767*/
+@media (max-width: 47.99rem){
+    header{
+        display: none;
+    }
+    
+    #first{
+        background: url(assets/wallpapaer-kazay-mobile.jpg) center center no-repeat;
+        background-size: cover;
+    }
+
+    #second{
+        height: auto;
+        padding: 2rem 0;
+    }
+    .second_container{
+        width: 26rem;
+        height: auto;
+        padding: 1rem 1.5rem;
+        gap: 2rem;
+        border-radius: 2rem;
+    }
+    .display_container{
+        height: 68rem;
+        flex-direction: column;
+    }
+    .display_container div {
+        width: 80%;
+        height: 22.5rem;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .display_container div img{
+        border-radius: 1rem ;
+        transition: .3s;
+        z-index: 1;
+    }
+
+    .second_container a{
+        background-color: var(--yellow);
+            color: black;
+            font-weight: 600;
+
+    }
+    .second_container a:hover{
+        transform: none;
+    }
+    /*----------------------------------------*/
+    #third{
+        height: auto;
+        padding: 2rem 0;
+    }
+    .third_container{
+        width: 26rem;
+        padding: 1rem 1.5rem;
+        gap: 2rem;
+        border-radius: 2rem;
+    }
+    .text_container_1{
+        flex-direction: column;
+    }
+    /*----------------------------------------*/
+    .up_contacts_container{
+        width: 26rem;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        align-items: center;
+        gap:.5rem
+    }
+    .contacts_container{
+        display: flex;
+        gap:1rem;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+    }
+    .contacts_container h2{
+        display: flex;
+        justify-content: center;
+    }
+    .contacts_info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .adress a {
+        width: 100%;
+    }
+}
+@media (max-width: 29.99rem) {
+    #first{
+        background: url(assets/wallpapaer-kazay-mobile-360p.jpg) center center no-repeat;
+        background-size: cover;
+    }
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+.second_container{
+    width: 20rem;
+    padding: 1rem;
+}
+.second_container h1{
+    text-align: center;
+}
+.display_container div {
+    width: 100%;
+    height: 22.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.third_container{
+    width: 20rem;
+    padding: 1rem;
+}
+.up_contacts_container{
+    width: 20rem;
+    flex-direction: column;
+    padding: 1rem 0rem;
+    align-items: center;
+    gap:.5rem
+}
+}
