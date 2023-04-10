@@ -10,7 +10,7 @@ a{
     background: var(--green);
     opacity: 1;
     border-radius: 50%;
-    box-shadow: 0 0 1rem 0 var(--green);
+    box-shadow: 0 0 .5rem 0 var(--green);
     animation: blink 6s infinite ease-in-out;
     }
 svg{
@@ -20,7 +20,7 @@ svg{
     0%{
 
     }
-    50%{box-shadow: 0 0 1rem .25rem var(--green);}
+    50%{box-shadow: 0 0 .6rem .25rem var(--green);}
     100%{}
 }
 @media (max-width: 74.99rem) {
