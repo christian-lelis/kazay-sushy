@@ -58,12 +58,15 @@
         display: flex;
     }
     .display_container div:hover {
+        pointer-events: none;
         transform: none;
     }
     .display_container div:hover img{
+        pointer-events: none;
         transform: none;
     }
     .display_container div:hover p{
+        pointer-events: none;
         transform: none;
         animation: none;
     }
@@ -79,6 +82,7 @@
 
     }
     .second_container a:hover{
+        pointer-events: none;
         transform: none;
     }
     /*----------------------------------------*/
@@ -138,6 +142,7 @@
 
     }
     .second_container a:hover{
+        pointer-events: none;
         transform: none;
     }
     /*----------------------------------------*/
