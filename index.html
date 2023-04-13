@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kazay Sushi</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsivity.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsivity.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <section id="first">
         </section>
         <section id="second" class="ramo_esquerda">
-            <div class="second_container">
+            <div class="second_container" data-slide="left">
                 <h1>Mais conhecidos</h1>
                 <div class="display_container">
                     <div>
@@ -45,7 +45,7 @@
             </div>
         </section>
         <section id="third" class="ramo_direita">
-            <div class="third_container">
+            <div class="third_container" data-slide="right">
                 <h1 class="title">KAZAY SUSHI</h1>
                 <div class="text_container">
                     <div class="text_container_1">
@@ -66,74 +66,82 @@
             </div>
         </section>
     </main>
-    <footer id="contacts">
-        <div class="up_contacts_container">
-            <div class="contacts_container">
-                <h2>KAZAY SUSHI</h2>
-                <div class="contacts_info">
-                    <ol class="direct_contacts">
-                        <li class="adress"><a
-                                href="https://www.google.com/maps/place/R.+Delfina,+45+-+Vila+Madalena,+S%C3%A3o+Paulo+-+SP,+05443-010/data=!4m2!3m1!1s0x94ce57bc178c085f:0xc16a8ab0763f750?sa=X&ved=2ahUKEwi9kNWclIf-AhVaH7kGHbUaCiYQ8gF6BAgVEAI"
-                                target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <footer id="contacts" >
+        <div class="footer_container" data-slide="bottom">
+            <div class="up_contacts_container">
+                <div class="contacts_container">
+                    <h2>KAZAY SUSHI</h2>
+                    <div class="contacts_info">
+                        <ol class="direct_contacts">
+                            <li class="adress"><a
+                                    href="https://www.google.com/maps/place/R.+Delfina,+45+-+Vila+Madalena,+S%C3%A3o+Paulo+-+SP,+05443-010/data=!4m2!3m1!1s0x94ce57bc178c085f:0xc16a8ab0763f750?sa=X&ved=2ahUKEwi9kNWclIf-AhVaH7kGHbUaCiYQ8gF6BAgVEAI"
+                                    target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+                                    </svg>
+                                    <h4>R. Delfina, 45 - Vila Madalena, São Paulo - SP, 05443-010</h4>
+                                </a></li>
+                            <li><a href="mailto:contato.kazay@yahoo.com">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z">
+                                        </path>
+                                    </svg>
+                                    <h4>contato.kazay@yahoo.com</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
                                     <path
-                                        d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+                                        d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z" />
                                 </svg>
-                                <h4>R. Delfina, 45 - Vila Madalena, São Paulo - SP, 05443-010</h4>
-                            </a></li>
-                        <li><a href="mailto:contato.kazay@yahoo.com">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z">
-                                    </path>
-                                </svg>
-                                <h4>contato.kazay@yahoo.com</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-                                <path
-                                    d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z" />
-                            </svg>
-                            <h4>(11) 3034-5582</h4>
-                        </li>
-                    </ol>
-                    <ul class="social_contacts">
-                        <li class="instagram"><a href="https://www.instagram.com/kazaysushi/" target="_blank">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.996.008C8.738.008 8.33.022 7.05.08 5.773.138 4.901.341 4.138.638A5.88 5.88 0 0 0 2.013 2.02 5.88 5.88 0 0 0 .63 4.146c-.297.763-.5 1.635-.558 2.912C.014 8.338 0 8.746 0 12.004s.014 3.667.072 4.946c.058 1.277.261 2.15.558 2.912a5.88 5.88 0 0 0 1.383 2.125 5.881 5.881 0 0 0 2.125 1.384c.763.296 1.635.499 2.912.557 1.28.058 1.688.072 4.946.072s3.667-.014 4.946-.072c1.277-.058 2.15-.261 2.912-.558a5.882 5.882 0 0 0 2.125-1.383 5.88 5.88 0 0 0 1.384-2.125c.296-.763.499-1.635.557-2.912.059-1.28.072-1.688.072-4.946s-.013-3.666-.072-4.946c-.058-1.277-.26-2.149-.557-2.912a5.881 5.881 0 0 0-1.384-2.125A5.881 5.881 0 0 0 19.854.638C19.091.34 18.22.138 16.942.08c-1.28-.058-1.688-.072-4.946-.072ZM7.997 12.004a3.999 3.999 0 1 0 7.998 0 3.999 3.999 0 0 0-7.998 0Zm-2.161 0a6.16 6.16 0 1 1 12.32 0 6.16 6.16 0 0 1-12.32 0ZM18.4 7.04a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88Z" fill="#fff"/></svg>
-                            </a></li>
-                        <li class="whatsapp"><a
-                                href="https://whatsa.me/5511984085182/?t=Oi!%20Eu%20gostaria%20de%20tirar%20uma%20duvida.%20%F0%9F%98%8A"
-                                target="_blank">
-                                <svg width="28" height="28" viewBox="-3 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    preserveAspectRatio="xMinYMin" class="jam jam-whatsapp">
-                                    <path
-                                        d="M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27 7.77 7.77 0 0 1-3.474-.808l-.701-.347-3.087.726.65-3.131-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z" />
-                                    <path
-                                        d="m14.842 12.045-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903-.137 1.343.443 3.036 2.637 5.07 2.535 2.349 4.566 2.66 5.887 2.341.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072z" />
-                                </svg>
-                            </a></li>
-                        <li class="ifood"><a
-                                href="https://www.ifood.com.br/delivery/sao-paulo-sp/kazay-sushi-vila-madalena/1fb86009-2c34-448e-838c-dcf14e5d6201"
-                                target="_blank">
-                                <svg width="24px" height="24px" viewBox="0 0 24 24" role="img"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.428 1.67c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006c4.244 0 7.184-3.854 7.184-6.998 0-2.29-2.175-3.293-4.244-3.293zm11.328 0c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006C21.061 11.96 24 8.107 24 4.963c0-2.29-2.18-3.293-4.244-3.293zm-5.584 12.85 2.435 1.834c-2.17 2.07-6.124 3.525-9.353 3.17A8.913 8.913 0 0 1 .23 14.541H0a9.598 9.598 0 0 0 8.828 7.758c3.814.24 7.323-.905 9.947-3.13l-.004.007 1.08 2.988 1.555-7.623-7.234-.02z" />
-                                </svg>
-                            </a></li>
-                    </ul>
+                                <h4>(11) 3034-5582</h4>
+                            </li>
+                        </ol>
+                        <ul class="social_contacts">
+                            <li class="instagram"><a href="https://www.instagram.com/kazaysushi/" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.996.008C8.738.008 8.33.022 7.05.08 5.773.138 4.901.341 4.138.638A5.88 5.88 0 0 0 2.013 2.02 5.88 5.88 0 0 0 .63 4.146c-.297.763-.5 1.635-.558 2.912C.014 8.338 0 8.746 0 12.004s.014 3.667.072 4.946c.058 1.277.261 2.15.558 2.912a5.88 5.88 0 0 0 1.383 2.125 5.881 5.881 0 0 0 2.125 1.384c.763.296 1.635.499 2.912.557 1.28.058 1.688.072 4.946.072s3.667-.014 4.946-.072c1.277-.058 2.15-.261 2.912-.558a5.882 5.882 0 0 0 2.125-1.383 5.88 5.88 0 0 0 1.384-2.125c.296-.763.499-1.635.557-2.912.059-1.28.072-1.688.072-4.946s-.013-3.666-.072-4.946c-.058-1.277-.26-2.149-.557-2.912a5.881 5.881 0 0 0-1.384-2.125A5.881 5.881 0 0 0 19.854.638C19.091.34 18.22.138 16.942.08c-1.28-.058-1.688-.072-4.946-.072ZM7.997 12.004a3.999 3.999 0 1 0 7.998 0 3.999 3.999 0 0 0-7.998 0Zm-2.161 0a6.16 6.16 0 1 1 12.32 0 6.16 6.16 0 0 1-12.32 0ZM18.4 7.04a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88Z"
+                                            fill="#fff" />
+                                    </svg>
+                                </a></li>
+                            <li class="whatsapp"><a
+                                    href="https://whatsa.me/5511984085182/?t=Oi!%20Eu%20gostaria%20de%20tirar%20uma%20duvida.%20%F0%9F%98%8A"
+                                    target="_blank">
+                                    <svg width="28" height="28" viewBox="-3 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                        preserveAspectRatio="xMinYMin" class="jam jam-whatsapp">
+                                        <path
+                                            d="M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27 7.77 7.77 0 0 1-3.474-.808l-.701-.347-3.087.726.65-3.131-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z" />
+                                        <path
+                                            d="m14.842 12.045-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903-.137 1.343.443 3.036 2.637 5.07 2.535 2.349 4.566 2.66 5.887 2.341.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072z" />
+                                    </svg>
+                                </a></li>
+                            <li class="ifood"><a
+                                    href="https://www.ifood.com.br/delivery/sao-paulo-sp/kazay-sushi-vila-madalena/1fb86009-2c34-448e-838c-dcf14e5d6201"
+                                    target="_blank">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" role="img"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.428 1.67c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006c4.244 0 7.184-3.854 7.184-6.998 0-2.29-2.175-3.293-4.244-3.293zm11.328 0c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006C21.061 11.96 24 8.107 24 4.963c0-2.29-2.18-3.293-4.244-3.293zm-5.584 12.85 2.435 1.834c-2.17 2.07-6.124 3.525-9.353 3.17A8.913 8.913 0 0 1 .23 14.541H0a9.598 9.598 0 0 0 8.828 7.758c3.814.24 7.323-.905 9.947-3.13l-.004.007 1.08 2.988 1.555-7.623-7.234-.02z" />
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="loading">
+                    <img src="assets/logo.png" alt="Kazay Sushi logo" class="bolinho">
                 </div>
             </div>
-            <div class="loading">
-                <img src="assets/logo.png" alt="Kazay Sushi logo" class="bolinho">
-            </div>
+            <a href="https://christian-lelis.netlify.app/" target="_blank" class="creator">Projetado e criado por
+                Christian
+                Lelis
+            </a>
         </div>
-        <a href="https://christian-lelis.netlify.app/" target="_blank" class="creator">Projetado e criado por Christian
-            Lelis
-        </a>
-
     </footer>
+    <script src="javascript/scroll.js"></script>
 </body>
 
 </html>

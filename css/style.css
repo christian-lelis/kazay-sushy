@@ -15,13 +15,13 @@ section{
     width: 100%;
 }
 .ramo_direita{
-    background: url(assets/ramos/25.png),linear-gradient(to bottom, var(--dark),
+    background: url(../assets/ramos/25.png),linear-gradient(to bottom, var(--dark),
     #0f0f0f, var(--dark));
     background-repeat: no-repeat;
     background-position: right center;
 }
 .ramo_esquerda{
-    background: url(assets/ramos/23.png),linear-gradient(to bottom, var(--dark),
+    background: url(../assets/ramos/23.png),linear-gradient(to bottom, var(--dark),
     #0f0f0f, var(--dark));
     background-repeat: no-repeat;
     background-position: left center;
@@ -40,6 +40,7 @@ header{
     background-color: #0000001d;
     backdrop-filter: blur(10px);
     z-index: 99;
+    animation: entrada 1s 1s both ease-in;
 }
 .menu{
     display: flex;
@@ -60,10 +61,31 @@ header{
     color: var(--yellow);
 }
 /* ------------------------------------------------- */
+[data-slide]{
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+[data-slide='right']{
+    transform: translate3d(3rem,0,0);
+}
+[data-slide="left"]{
+    transform: translate3d(-3rem,0,0);
+    
+}
+[data-slide="bottom"]{
+    transform: translateY(-3rem)
+}
+[data-slide].animation{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+
+}
+
+/* ------------------------------------------------- */
 
 #first{
     width: 100%;
-    background: url(assets/wallpapaer-kazay.jpg) center center;
+    background: url(../assets/wallpapaer-kazay.jpg) center center;
     opacity: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -202,12 +224,17 @@ header{
 /* ------------------------------------------------- */
 footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 100%;
     background-color: var(--green);
     color: var(--black);
+}
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 .up_contacts_container{
     display: flex;

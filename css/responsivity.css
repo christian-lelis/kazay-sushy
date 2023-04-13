@@ -1,7 +1,7 @@
 /*1024-1199 */
 @media (max-width: 74.99rem) {
     #first{
-        background-image: url(assets/wallpapaer-kazay-responsivity.png)center center;
+        background-image: url(../assets/wallpapaer-kazay-responsivity.png)center center;
     }
     .second_container{
         width: 55rem;
@@ -104,7 +104,7 @@
     }
     
     #first{
-        background: url(assets/wallpapaer-kazay-mobile.jpg) center center no-repeat;
+        background: url(../assets/wallpapaer-kazay-mobile.jpg) center center no-repeat;
         background-size: cover;
     }
 
@@ -189,7 +189,7 @@
 }
 @media (max-width: 29.99rem) {
     #first{
-        background: url(assets/wallpapaer-kazay-mobile-360p.jpg) center center no-repeat;
+        background: url(../assets/wallpapaer-kazay-mobile-360p.jpg) center center no-repeat;
         background-size: cover;
     }
 
