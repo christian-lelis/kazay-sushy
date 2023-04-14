@@ -2,21 +2,30 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10847403505"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-10847403505');
+    </script>
     <!-- Google Tag Manager -->
-  <!-- Event snippet for Clique de saida conversion page -->
-<script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+    <!-- Event snippet for Clique de saida conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-10847403505/kOz0CK7ZkJgYEPH7uLQo',
+                'event_callback': callback
+            });
+            return false;
         }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-10847403505/kOz0CK7ZkJgYEPH7uLQo',
-          'event_callback': callback
-      });
-      return false;
-    }
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
