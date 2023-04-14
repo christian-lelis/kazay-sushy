@@ -17,12 +17,13 @@ const debounce = function(func, wait, immediate) {
   };
 
 function animationScroll(){
-    const windowTop = window.scrollY*1.80;
+    const windowTop = window.scrollY + window.scrollY*.75;
+    console.log(windowTop)
     target.forEach(function(e){
-        console.log(e)
+        // console.log(e)
         if(windowTop > e.offsetTop){
             e.classList.add(animationClass)
-        }else{
+        }else if (windowTop < e.offsetTop){
             e.classList.remove(animationClass)
         }
     })
