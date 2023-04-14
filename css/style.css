@@ -66,11 +66,10 @@ header{
     transition: .5s ease-in-out;
 }
 [data-slide='right']{
-    transform: translate3d(1rem,0,0);
+    transform: translate3d(3rem,0,0);
 }
 [data-slide="left"]{
-    transform: translate3d(-1rem,0,0);
-    
+    transform: translate3d(-3rem,0,0);
 }
 [data-slide="bottom"]{
     transform: translateY(-3rem)

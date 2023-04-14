@@ -102,6 +102,12 @@
     header{
         display: none;
     }
+    [data-slide='right']{
+        transform: translate3d(1rem,0,0);
+    }
+    [data-slide="left"]{
+        transform: translate3d(-1rem,0,0);
+    }
     
     #first{
         background: url(../assets/wallpapaer-kazay-mobile.jpg) center center no-repeat;
@@ -192,7 +198,7 @@
         background: url(../assets/wallpapaer-kazay-mobile-360p.jpg) center center no-repeat;
         background-size: cover;
     }
-
+    
 h1 {
     font-size: 2.5rem;
 }
