@@ -301,7 +301,8 @@ footer{
     display: flex;
     gap:.5rem;
     text-decoration: none;
-    color:var(--black)
+    color:var(--black);
+    font-weight: 700;
 }
 
 .loading {
