@@ -238,7 +238,7 @@ footer{
 .up_contacts_container{
     display: flex;
     width: 70rem;
-    padding: .5rem 4rem .5rem 4rem;
+    padding: 1rem 4rem 1rem 4rem;
     justify-content: space-evenly;
     border-bottom: .12rem solid #71b627;
 }

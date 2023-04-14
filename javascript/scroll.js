@@ -17,8 +17,7 @@ const debounce = function(func, wait, immediate) {
   };
 
 function animationScroll(){
-    const windowTop = window.scrollY + window.innerHeight*.75;
-    console.log(windowTop)
+    const windowTop = window.scrollY + window.innerHeight*.80;
     target.forEach(function(e){
         // console.log(e)
         if(windowTop > e.offsetTop){
