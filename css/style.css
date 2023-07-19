@@ -45,7 +45,7 @@ header{
 .menu{
     display: flex;
     height: 3rem;
-    min-width: 54rem;
+    min-width: 48rem;
     max-width: 62rem;
     justify-content: space-around;
     text-transform: uppercase;
