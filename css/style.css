@@ -407,6 +407,22 @@ ul, ol {
     
 }
 
+.direction-99{
+    background: linear-gradient(320deg, #f3a015 ,#f8c12c );
+    
+}
+
+.direction-uber svg{
+    margin:0 !important;
+    width: 48px !important; 
+    height: 48px !important;
+    filter: drop-shadow(0rem .5rem 5px rgba(0, 0, 0, 0.5));
+}
+.direction-uber{
+    color:#fff;
+    background: linear-gradient(320deg,  #0c0c0c ,#2e2e2e );
+    }
+
 .direction-instagram svg{
     filter: drop-shadow(0rem .5rem 5px rgba(0, 0, 0, 0.5))
 }
