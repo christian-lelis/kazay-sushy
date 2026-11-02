@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+  <rect width="60" height="40" fill="#fff"/>
+  <path d="M21 20 A9 9 0 0 1 39 20 A4.5 4.5 0 0 1 30 20 A4.5 4.5 0 0 0 21 20 Z" fill="#CD2E3A"/>
+  <path d="M21 20 A4.5 4.5 0 0 0 30 20 A4.5 4.5 0 0 1 39 20 A9 9 0 0 1 21 20 Z" fill="#0047A0"/>
+  <g fill="#000">
+    <!-- NE: Geon (três barras cheias) -->
+    <g transform="translate(43.5,8.5) rotate(-45)">
+      <rect x="-4" y="-4.6" width="8" height="1.5"/>
+      <rect x="-4" y="-0.75" width="8" height="1.5"/>
+      <rect x="-4" y="3.1" width="8" height="1.5"/>
+    </g>
+    <!-- SE: Rim (cheia, quebrada, cheia) -->
+    <g transform="translate(43.5,31.5) rotate(45)">
+      <rect x="-4" y="-4.6" width="8" height="1.5"/>
+      <rect x="-4" y="-0.75" width="2.9" height="1.5"/><rect x="1.1" y="-0.75" width="2.9" height="1.5"/>
+      <rect x="-4" y="3.1" width="8" height="1.5"/>
+    </g>
+    <!-- SW: Gon (três quebradas) -->
+    <g transform="translate(16.5,31.5) rotate(-45)">
+      <rect x="-4" y="-4.6" width="2.9" height="1.5"/><rect x="1.1" y="-4.6" width="2.9" height="1.5"/>
+      <rect x="-4" y="-0.75" width="2.9" height="1.5"/><rect x="1.1" y="-0.75" width="2.9" height="1.5"/>
+      <rect x="-4" y="3.1" width="2.9" height="1.5"/><rect x="1.1" y="3.1" width="2.9" height="1.5"/>
+    </g>
+    <!-- NW: Ri (quebrada, cheia, quebrada) -->
+    <g transform="translate(16.5,8.5) rotate(45)">
+      <rect x="-4" y="-4.6" width="2.9" height="1.5"/><rect x="1.1" y="-4.6" width="2.9" height="1.5"/>
+      <rect x="-4" y="-0.75" width="8" height="1.5"/>
+      <rect x="-4" y="3.1" width="2.9" height="1.5"/><rect x="1.1" y="3.1" width="2.9" height="1.5"/>
+    </g>
+  </g>
+</svg>
