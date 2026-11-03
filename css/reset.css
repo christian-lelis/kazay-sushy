@@ -1,29 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+/* Concept 4 · Elegância Gastronômica — mesmos tokens do cardapio/ */
 :root{
-    --dark: #121317;
-    --black: #191a1c;
-    --white: #fdfcf5;
-    --yellow: #f7d107;
-    --tYellow: #f7d307ea;
-    --green: #8ed640;
-    /* 8ed640 ou 98d656 */
-    --orange: #fea11f;
+    --fundo:#0D0A08;
+    --dourado:#C9A26B;
+    --branco:#F4F0E9;
+    --cinza:#AAA39A;
+    --linha:rgba(201,162,107,.22);
 }
 html{
-    font-family: 'Baloo Tamma 2', cursive;
-    scroll-behavior: smooth;
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+}
+body{
+    background:var(--fundo);
+    color:var(--branco);
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    letter-spacing:.02em;
 }
 h1{
-    font-size: 2.6rem;
+    font-size: 3rem;
 }
 h2{
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 h3{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 p{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 *{
     box-sizing: border-box;
@@ -34,13 +44,13 @@ p{
 ::-webkit-scrollbar{
     width: .5rem;
 }
-::-webkit-scrollbar-thumb{
-    background-color: var(--yellow);
-    border-radius: 1rem;
+::-webkit-scrollbar-track{
+    background: var(--fundo);
 }
-body{
-    background: var(--black);
-    color: var(--white);
+::-webkit-scrollbar-thumb{
+    background-color: var(--dourado);
+    opacity:.6;
+    border-radius: 1rem;
 }
 img{
     width: 100%;

@@ -15,14 +15,14 @@ section{
     width: 100%;
 }
 .ramo_direita{
-    background: url(../assets/ramos/25.png),linear-gradient(to bottom, var(--dark),
-    #0f0f0f, var(--dark));
+    background: url(../assets/ramos/25.png),linear-gradient(to bottom, var(--fundo),
+    #14100B, var(--fundo));
     background-repeat: no-repeat;
     background-position: right center;
 }
 .ramo_esquerda{
-    background: url(../assets/ramos/23.png),linear-gradient(to bottom, var(--dark),
-    #0f0f0f, var(--dark));
+    background: url(../assets/ramos/23.png),linear-gradient(to bottom, var(--fundo),
+    #14100B, var(--fundo));
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -37,8 +37,9 @@ header{
     width: 100vw;
     justify-content: center;
     align-items: center;
-    background-color: #0000001d;
+    background-color: rgba(13,10,8,.72);
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--linha);
     z-index: 99;
     animation: entrada 1s 1s both ease-in;
 }
@@ -51,14 +52,17 @@ header{
     text-transform: uppercase;
     align-items: center;
     list-style: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    box-shadow: 0 1rem 1.2rem -1.4rem #ffffffc0;
 }
 
 .menu li a{
     text-decoration: none;
-    color: var(--yellow);
+    color: var(--cinza);
+    font-size: .72rem;
+    letter-spacing: .2em;
+    transition: color .25s;
+}
+.menu li a:hover{
+    color: var(--dourado);
 }
 /* ------------------------------------------------- */
 [data-slide]{
@@ -84,6 +88,7 @@ header{
 
 #first{
     width: 100%;
+    position: relative;
     background: url(../assets/wallpapaer-kazay.jpg) center center;
     opacity: 0;
     background-repeat: no-repeat;
@@ -91,6 +96,13 @@ header{
     justify-content: center;
     flex-direction: column;
     animation: entrada 1s .5s both ease-in;
+}
+/* Véu escuro p/ harmonizar o wallpaper com o Concept 4 (fundo + fade inferior) */
+#first::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(0deg,var(--fundo) 0%,rgba(13,10,8,.2) 45%,rgba(13,10,8,.6) 100%);
 }
 @keyframes entrada {
     0%{opacity: 0;}
@@ -106,14 +118,13 @@ header{
     justify-content: center;
     flex-direction: column;
     gap:1rem;
-    backdrop-filter: blur(4px);
-    border-radius: 2rem;
-    background-image: radial-gradient(closest-corner, #0000001a 70%, #00000000);
-    border-radius: 5rem;
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--linha);
+    background: rgba(244,240,233,.02);
     padding: 2rem 4rem;
 }
 .second_container h1 {
-    color: var(--yellow);
+    color: var(--branco);
 }
 .display_container{
     display: flex;
@@ -130,13 +141,12 @@ header{
     background-color: rgba(0, 0, 0, 0);
     width: 50%;
     height: 24rem;
-    border-radius: 1rem;
     overflow: hidden;
     transition: .3s ease-in-out;
     gap: 1rem;
 }
 .display_container div img{
-    border-radius: 1rem ;
+    border-radius: 0 ;
     transition: .3s;
     z-index: 1;
 }
@@ -145,9 +155,13 @@ header{
     width: 100%;
     justify-content: center;
     transition: .3s ease-in;
+    color: var(--branco);
+    font-size: .92rem;
+    font-weight: 500;
+    letter-spacing: .04em;
 }
 .display_container div:hover{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(13, 10, 8, 0.6);
 }
 .display_container div:hover img{
     transform: scale(1.08);    
@@ -166,20 +180,22 @@ header{
         transform: translateY(0rem);
     }
 }
+/* Mesma linguagem de botão do cardápio (.btn) */
 .second_container a{
-    color: var(--yellow);
-    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--branco);
+    background-color: transparent;
     text-decoration: none;
-    padding: .8rem 4rem;
-    border-radius: 2rem;
-    font-size: 1.4rem;
-    transition: .5s ease;
-    border: .125rem solid var(--yellow);
+    padding: .95rem 2.4rem;
+    font-size: .78rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    transition: background .3s, color .3s;
+    border: 1px solid var(--dourado);
 }
 .second_container a:hover{
-    background-color: var(--yellow);
-    color: black;
-    font-weight: 600;
+    background-color: rgba(201,162,107,.14);
+    color: var(--branco);
+    font-weight: 500;
 }
 /* ------------------------------------------------- */
 .third_container{
@@ -190,15 +206,15 @@ header{
     justify-content: center;
     flex-direction: column;
     gap: 4rem;
-    backdrop-filter: blur(4px);
-    border-radius: 2rem;
-    background-image: radial-gradient(closest-corner, #0000001a 70%, #00000000);
-    border-radius: 5rem;
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--linha);
+    background: rgba(244,240,233,.02);
     padding: 2rem 4rem;
 }
 
 .title{
-    color: var(--yellow);
+    color: var(--dourado);
+    letter-spacing: .14em;
 }
 .text_container{
     display: flex;
@@ -214,12 +230,16 @@ header{
 .text_container_1 p{
     min-width: 18rem;
     max-width: 28rem;
+    color: var(--cinza);
 }
 .text_container_2{
     text-align: center;
 }
 .text_span{
-    color: var(--yellow);
+    color: var(--dourado);
+    font-family:'Cormorant Garamond',serif;
+    font-style: italic;
+    font-size: 1.25em;
 }
 /* ------------------------------------------------- */
 footer{
@@ -227,8 +247,9 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: var(--green);
-    color: var(--black);
+    background-color: var(--fundo);
+    color: var(--branco);
+    border-top: 1px solid var(--linha);
 }
 .footer_container{
     display: flex;
@@ -241,7 +262,11 @@ footer{
     width: 70rem;
     padding: 1rem 4rem 1rem 4rem;
     justify-content: space-evenly;
-    border-bottom: .12rem solid #71b627;
+    border-bottom: 1px solid var(--linha);
+}
+.contacts_container h2{
+    color: var(--dourado);
+    letter-spacing: .14em;
 }
 .contacts_container{
     display: flex;
@@ -260,8 +285,13 @@ footer{
     display: flex;
     width: 27rem;
     text-decoration: none;
-    color: var(--black);
-    gap:.5rem
+    color: var(--cinza);
+    gap:.5rem;
+    font-size: .95rem;
+    transition: color .25s;
+}
+.adress a:hover{
+    color: var(--dourado);
 }
 .social_contacts {
     width: 20rem;
@@ -269,20 +299,16 @@ footer{
     justify-content: space-between;
 }
 
+/* Ícones sociais monocromáticos (Concept 4): tile escuro + hairline dourada */
 .social_contacts li{
     width: 6rem;
     display: flex;
     align-items: center;
-    border-radius: 1rem;
+    border: 1px solid var(--linha);
+    transition: border-color .3s;
 }
-.instagram{
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-}
-.whatsapp {
-    background: linear-gradient(to bottom,#5ad065,#23b039);
-}
-.ifood{
-    background-color: #ff001b;
+.social_contacts li:hover{
+    border-color: rgba(201,162,107,.55);
 }
 .social_contacts li a{
     display: flex;
@@ -291,8 +317,8 @@ footer{
     width: 6rem;
 }
 .social_contacts path{
-    fill: #fff;
-    opacity: 0.9;
+    fill: var(--branco);
+    opacity: 0.85;
 }
 .direct_contacts li{
     display: flex;
@@ -302,8 +328,13 @@ footer{
     display: flex;
     gap:.5rem;
     text-decoration: none;
-    color:var(--black);
-    font-weight: 700;
+    color:var(--cinza);
+    font-weight: 400;
+    font-size: .95rem;
+    transition: color .25s;
+}
+.direct_contacts li a:hover{
+    color: var(--dourado);
 }
 
 .loading {
@@ -316,15 +347,17 @@ footer{
 .creator{
     width:fit-content;
     display: flex;
-    font-weight: 700;
+    font-weight: 400;
     justify-content: center;
     text-decoration: none;
-    color: var(--black);
+    color: var(--cinza);
+    font-size: .8rem;
+    letter-spacing: .06em;
     padding:1rem 1rem .8rem 1rem;
     transition: .3s ease-in-out;
 }
 .creator:hover{
-    color: white;
+    color: var(--dourado);
 }
 ul{
     height: 2rem;
@@ -334,12 +367,13 @@ ul, ol {
 }
 
 /* ---------------------------------- */
+/* Concept 4: fundo escuro com brilho dourado sutil atrás da logo (vermelho só na logo) */
 .capa{
     display: flex;
     justify-content: center;
     width: 100%;
     height: 7rem;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), #97000f 20%,#ff6600 );
+    background: radial-gradient(ellipse 70% 130% at 50% 100%, rgba(201,162,107,.16), transparent 70%), var(--fundo);
     margin: 0 0 1rem 0 ;
 }
 
@@ -349,8 +383,9 @@ ul, ol {
 }
 
 .boasVindas{
-    width: 16rem;
-    font-size: .8rem;
+    width: 24rem;
+    font-size: .95rem;
+    color: var(--cinza);
     text-align: center;margin:  0 0 1.5rem 0;
 }
 
@@ -368,6 +403,7 @@ ul, ol {
     grid-gap: 20px;
 }
 
+/* Tiles unificados Concept 4: superfície escura + hairline dourada, ícone monocromático */
 .wrapper button{
     display: flex;
     width: 6.5rem;
@@ -375,25 +411,27 @@ ul, ol {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: .8rem;
     gap: .3rem;
+    background: rgba(244,240,233,.02);
+    border: 1px solid var(--linha);
+    transition: border-color .3s;
 }
 
+.wrapper a:hover button{
+    border-color: rgba(201,162,107,.55);
+}
+
+/* Ícones em branco suave (os SVGs multicolor — Google/Maps — mantêm as cores próprias) */
 .wrapper a button svg{
     align-items: center;
     width: 2.1rem;
     height: 2.1rem;
     margin-bottom: 0.3rem;
-    filter: drop-shadow(0rem .5rem 5px rgba(0, 0, 0, 0.7))
+    fill: var(--branco);
 }
 
-.direction-cardapio{
-    background: linear-gradient(320deg, #97000f ,#ff6600 );
-}
-
-.direction-google{
-    background: linear-gradient(320deg, #1a73e6 ,#34a851 70%);
-
+.direction-99 svg path{
+    fill: var(--branco);
 }
 
 .direction-google svg{
@@ -402,61 +440,23 @@ ul, ol {
     
 }
 
-.direction-ifood{
-    background: linear-gradient(320deg, #97000f ,#ff001b );
-    
-}
-
-.direction-99{
-    background: linear-gradient(320deg, #f3a015 ,#f8c12c );
-    
-}
-
 .direction-uber svg{
-    margin:0 !important;
+    margin:0 !important; 
     width: 48px !important; 
     height: 48px !important;
-    filter: drop-shadow(0rem .5rem 5px rgba(0, 0, 0, 0.5));
-}
-.direction-uber{
-    color:#fff;
-    background: linear-gradient(320deg,  #0c0c0c ,#2e2e2e );
-    }
-
-.direction-instagram svg{
-    filter: drop-shadow(0rem .5rem 5px rgba(0, 0, 0, 0.5))
-}
-
-.direction-instagram{
-    background: linear-gradient(320deg,  #bc1888 0%, #cc2366 25%,#dc2743 50%,#df5321 75%,#ec8e28 100%);
-    }
-
-.direction-whatsapp{
-    background: linear-gradient(320deg,#19942b,#5ad065);
-    fill:#0f0f0fb3;
-}
-
-.direction-whatsapp svg{
-        fill:#fff
-    }
-
-.direction-site{
-    background: linear-gradient(320deg, #97000f ,#ff6600 );
-}
-
-.direction-fone{
-    background: linear-gradient(320deg,#19942b,#5ad065);
-}
-
-.direction-fone svg{
-    fill:#fff
 }
 
 .wrapper button p{
-    font-family: 'Baloo Tamma 2', cursive;
-    font-size: 1rem;
-    font-weight: 700;
-    opacity: 0.7    ;
+    font-family:'Inter',sans-serif;
+    font-size: .72rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--cinza);
+    transition: color .3s;
+}
+
+.wrapper a:hover button p{
+    color: var(--dourado);
 }
 
 .wrapper a{

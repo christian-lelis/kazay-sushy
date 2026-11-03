@@ -5,12 +5,12 @@ import os, sys
 from PIL import Image
 
 SRC = r"D:\cardapio\Fotos zoe kazay delivery"
-DST = r"D:\cardapio\Projeto\assets\fotos"
+DST = r"D:\cardapio\Projeto\cardapio\assets\fotos"
 W, Q = 800, 80
 FUND = (13, 10, 8)  # fundo p/ flattening de PNGs
 
 # Carrossel da seção institucional: ocupa a tela inteira → versão maior e mais nítida
-DST_HI = r"D:\cardapio\Projeto\assets\fotos-institucional"
+DST_HI = r"D:\cardapio\Projeto\cardapio\assets\fotos-institucional"
 W_HI, Q_HI = 1920, 85
 INSTITUCIONAL = [
     "carpaccio-salmao-trufado", "ceviche", "camarao-lula",
