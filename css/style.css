@@ -373,7 +373,7 @@ ul, ol {
     justify-content: center;
     width: 100%;
     height: 12rem;
-    background: radial-gradient(ellipse 30% 20% at 50% 42%, rgba(201,162,107,.07) 0%, transparent 100%), var(--fundo);
+    background: radial-gradient(ellipse 270px 95px at 50% 42%, rgba(201,162,107,.07) 0%, transparent 100%), var(--fundo);
 }
 
 .logo{
