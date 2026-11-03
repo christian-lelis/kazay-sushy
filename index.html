@@ -44,18 +44,31 @@
 <body>
     <header>
         <ul class="menu">
-            <li><a href="#first" target="_self">Home</a></li>
-            <li><a href="#second" target="_self">Cardápio</a></li>
-            <li><a href="#third" target="_self">Sobre</a></li>
-            <li><a href="#contacts" target="_self">Contatos</a></li>
+            <li><a href="#first" target="_self" data-i18n="nav_home">Home</a></li>
+            <li><a href="#second" target="_self" data-i18n="nav_cardapio">Cardápio</a></li>
+            <li><a href="#third" target="_self" data-i18n="nav_sobre">Sobre</a></li>
+            <li><a href="#contacts" target="_self" data-i18n="nav_contatos">Contatos</a></li>
         </ul>
+        <div class="sel-idioma-wrap" id="sel-idioma">
+            <button type="button" class="sel-idioma-btn" aria-haspopup="listbox" aria-label="Idioma / Language / Sprache">
+                <img class="sel-idioma-flag" src="cardapio/assets/bandeiras/pt.svg" alt="" aria-hidden="true">
+            </button>
+            <ul class="sel-idioma-menu" role="listbox" hidden>
+                <li role="option" data-id="pt"><img src="cardapio/assets/bandeiras/pt.svg" alt="">BR</li>
+                <li role="option" data-id="en"><img src="cardapio/assets/bandeiras/en.svg" alt="">EN</li>
+                <li role="option" data-id="fr"><img src="cardapio/assets/bandeiras/fr.svg" alt="">FR</li>
+                <li role="option" data-id="de"><img src="cardapio/assets/bandeiras/de.svg" alt="">DE</li>
+                <li role="option" data-id="ko"><img src="cardapio/assets/bandeiras/ko.svg" alt="">KO</li>
+                <li role="option" data-id="ja"><img src="cardapio/assets/bandeiras/ja.svg" alt="">JA</li>
+            </ul>
+        </div>
     </header>
     <main>
         <section id="first">
         </section>
         <section id="second" class="ramo_esquerda">
             <div class="second_container" data-slide="left">
-                <h1>Mais conhecidos</h1>
+                <h1 data-i18n="mais_conhecidos">Mais conhecidos</h1>
                 <div class="display_container">
                     <div>
                         <img src="assets/SAL-GRE.jpg" alt="">
@@ -70,7 +83,7 @@
                         <p>Hot roll</p>
                     </div>
                 </div>
-                <a href="cardapio/index.html">Ver cardápio
+                <a href="cardapio/index.html" data-i18n="ver_cardapio">Ver cardápio
                 </a>
             </div>
         </section>
@@ -79,14 +92,14 @@
                 <h1 class="title">KAZAY SUSHI</h1>
                 <div class="text_container">
                     <div class="text_container_1">
-                        <p>O Kazay Sushi foi criado em 2019 com o intuito de quebrar a crença popular de que comida
+                        <p data-i18n="sobre_p1">O Kazay Sushi foi criado em 2019 com o intuito de quebrar a crença popular de que comida
                             japonesa não tem gosto, procurando proporcionar a melhor experiência e sabor através de
                             culinária japonesa.</p>
-                        <p>Nossos pratos são criados com cuidado, procurando ressaltar o sabor da culinária japonesa até
+                        <p data-i18n="sobre_p2">Nossos pratos são criados com cuidado, procurando ressaltar o sabor da culinária japonesa até
                             para os paladares mais céticos.</p>
                     </div>
                     <div class="text_container_2">
-                        <h3>Alerta a todos os que não gostam de japa:<br>Cuidado, não venham ao Kazay
+                        <h3 data-i18n-html="sobre_h3">Alerta a todos os que não gostam de japa:<br>Cuidado, não venham ao Kazay
                             Sushi!
                             <br>
                             ! ! <span class="text_span">Pois se vier é perigoso se apaixonar 😏</span> ! !
@@ -165,13 +178,14 @@
                     <img src="assets/logo.png" alt="Kazay Sushi logo" class="bolinho">
                 </div>
             </div>
-            <a href="https://christian-lelis.netlify.app/" target="_blank" class="creator">Projetado e criado por
+            <a href="https://christian-lelis.netlify.app/" target="_blank" class="creator" data-i18n="credit">Projetado e criado por
                 Christian
                 Lelis
             </a>
         </div>
     </footer>
     <script src="javascript/scroll.js"></script>
+    <script src="javascript/idioma.js"></script>
 </body>
 
 </html>

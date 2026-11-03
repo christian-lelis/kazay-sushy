@@ -84,7 +84,8 @@
 }
 /*480-767*/
 @media (max-width: 47.99rem){
-    header{
+    /* Mobile: esconde só o menu — a barra fica com o seletor de idioma */
+    .menu{
         display: none;
     }
     [data-slide='right']{
