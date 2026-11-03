@@ -226,6 +226,15 @@ menuIdioma.querySelectorAll("li").forEach((li) => {
 });
 document.addEventListener("click", (e) => { if (!selIdioma.contains(e.target)) fecharMenu(); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") fecharMenu(); });
+
+/* Sincronização ao vivo: idioma trocado em outro tab (ex.: index) aplica aqui */
+window.addEventListener("storage", (e) => {
+  if (e.key !== "kazay-idioma") return;
+  idioma = IDIOMAS.includes(e.newValue) ? e.newValue : "pt";
+  atualizarBandeira();
+  renderTudo();
+});
+
 atualizarBandeira();
 renderTudo();
 
