@@ -240,7 +240,7 @@ renderTudo();
     if (!el || !fotos) return;
     const imgs = fotos.map((f, i) => {
       const img = new Image();
-      img.src = `assets/fotos/${f}.jpg`;
+      img.src = `assets/capas/${f}.jpg`; // versão HD (1920px) só p/ as capas dos cards
       img.alt = "";
       if (i > 0) img.loading = "lazy";
       el.appendChild(img);
