@@ -110,8 +110,9 @@ function cardItem(it, { preco = true, badge = false } = {}) {
 
 function grade(el, itens, opts = {}) {
   el.innerHTML = "";
-  // quem tem foto vai primeiro; sem foto, pro fim (ordem interna preservada)
-  const ordenados = [...itens.filter((i) => i.f), ...itens.filter((i) => !i.f)];
+  // quem tem foto vai primeiro; sem foto, pro fim (ordem interna preservada); itens ocultos não renderizam
+  const visiveis = itens.filter((i) => !i.oculto);
+  const ordenados = [...visiveis.filter((i) => i.f), ...visiveis.filter((i) => !i.f)];
   ordenados.forEach((it) => el.appendChild(cardItem(it, opts)));
 }
 
