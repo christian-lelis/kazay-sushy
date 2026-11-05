@@ -80,7 +80,7 @@ const CARDAPIO = {
       { n: "Jyo Trufado", f: "jyo-trufado" },
       { n: "Niguiri Trufado", f: "niguiri-trufado" },
       { n: "Camarão e Lula na Manteiga", f: "camarao-lula" },
-      { n: "Tempurá de Camarão", f: "tempura-camarao" },
+      { n: "Tempurá de Camarão", f: "tempura-camarao", oculto: true }, // oculto por enquanto (pedido do cliente) — segue no à la carte
       { n: "Yakissoba de Filé Mignon", f: "yakissoba-file-mignon" },
       { n: "Temaki de Camarão e Empanado", f: "temaki-ebi" },
       { n: "Sashimi na Pedra de Sal" },
