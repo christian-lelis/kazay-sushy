@@ -26,12 +26,18 @@
             });
             return false;
         }
+        /* "Clique de saída" nos links iFood/99 Food: dispara a conversão sem
+           sequestrar a navegação (os links abrem em nova aba) */
+        function gtag_saida() {
+            gtag('event', 'conversion', { 'send_to': 'AW-10847403505/kOz0CK7ZkJgYEPH7uLQo' });
+        }
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kazay Sushi</title>
+    <title>Kazay Sushi · Culinária Japonesa em Vila Madalena</title>
+    <meta name="description" content="Kazay Sushi — culinária japonesa na Vila Madalena, São Paulo. Desde 2019 quebrando a crença de que comida japonesa não tem gosto. Peça pelo iFood ou 99 Food.">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/site-icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/site-icon/icon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/site-icon/icon-16x16.png">
@@ -40,13 +46,13 @@
     <link rel="stylesheet" href="css/responsivity.css">
 
 </head>
-
 <body>
     <header>
         <ul class="menu">
             <li><a href="#first" target="_self" data-i18n="nav_home">Home</a></li>
-            <li><a href="#second" target="_self" data-i18n="nav_cardapio">Cardápio</a></li>
-            <li><a href="#third" target="_self" data-i18n="nav_sobre">Sobre</a></li>
+            <li><a href="cardapio/index.html" target="_self" data-i18n="nav_cardapio">Cardápio</a></li>
+            <li><a href="#pedir" target="_self" data-i18n="nav_pedir">Como pedir</a></li>
+            <li><a href="#sobre" target="_self" data-i18n="nav_sobre">Sobre</a></li>
             <li><a href="#contacts" target="_self" data-i18n="nav_contatos">Contatos</a></li>
         </ul>
         <div class="sel-idioma-wrap" id="sel-idioma">
@@ -64,48 +70,104 @@
         </div>
     </header>
     <main>
-        <section id="first">
-        </section>
-        <section id="second" class="ramo_esquerda">
-            <div class="second_container" data-slide="left">
-                <h1 data-i18n="mais_conhecidos">Mais conhecidos</h1>
-                <div class="display_container">
-                    <div>
-                        <img src="assets/SAL-GRE.jpg" alt="">
-                        <p>Salmão grelhado</p>
-                    </div>
-                    <div>
-                        <img src="assets/GUI.jpg" alt="">
-                        <p>Guiosa frita</p>
-                    </div>
-                    <div>
-                        <img src="assets/HOT.jpg" alt="">
-                        <p>Hot roll</p>
-                    </div>
-                </div>
-                <a href="cardapio/index.html" data-i18n="ver_cardapio">Ver cardápio
-                </a>
+        <section id="first" class="hero-home">
+            <div class="hero-fotos" aria-hidden="true">
+                <img src="cardapio/assets/capas/komb-sushi-kazay.jpg" alt="">
+                <img src="cardapio/assets/capas/carpaccio-salmao-trufado.jpg" alt="">
+                <img src="cardapio/assets/capas/camarao-lula.jpg" alt="">
+                <img src="cardapio/assets/fotos-institucional/temaki-salmao-completo.jpg" alt="">
+                <img src="cardapio/assets/capas/ceviche.jpg" alt="">
+                <img src="cardapio/assets/capas/niguiri-trufado.jpg" alt="">
+            </div>
+            <div class="hero-conteudo">
+                <p class="hero-local">Vila Madalena · São Paulo</p>
+                <h1>KAZAY SUSHI</h1>
+                <p class="hero-tagline" data-i18n="hero_tagline">Aqui, comida japonesa tem gosto.</p>
+                <a href="cardapio/index.html" class="btn-ouro" data-i18n="ver_cardapio">Ver o cardápio</a>
             </div>
         </section>
-        <section id="third" class="ramo_direita">
-            <div class="third_container" data-slide="right">
-                <h1 class="title">KAZAY SUSHI</h1>
-                <div class="text_container">
-                    <div class="text_container_1">
-                        <p data-i18n="sobre_p1">O Kazay Sushi foi criado em 2019 com o intuito de quebrar a crença popular de que comida
-                            japonesa não tem gosto, procurando proporcionar a melhor experiência e sabor através de
-                            culinária japonesa.</p>
-                        <p data-i18n="sobre_p2">Nossos pratos são criados com cuidado, procurando ressaltar o sabor da culinária japonesa até
-                            para os paladares mais céticos.</p>
-                    </div>
-                    <div class="text_container_2">
-                        <h3 data-i18n-html="sobre_h3">Alerta a todos os que não gostam de japa:<br>Cuidado, não venham ao Kazay
-                            Sushi!
-                            <br>
-                            ! ! <span class="text_span">Pois se vier é perigoso se apaixonar 😏</span> ! !
-                        </h3>
-                    </div>
+        <section id="pratos" class="ramo_esquerda">
+            <div class="pratos-container" data-slide="left">
+                <h2 data-i18n="mais_pedidos">Os mais pedidos</h2>
+                <div class="pratos-grade">
+                    <figure class="prato-card">
+                        <img src="cardapio/assets/fotos-institucional/temaki-atum-completo.jpg" alt="Temaki Atum Completo">
+                        <figcaption>Temaki Atum Completo</figcaption>
+                    </figure>
+                    <figure class="prato-card">
+                        <img src="cardapio/assets/fotos-institucional/guioza-frita.jpg" alt="Gyoza Frita e a Vapor">
+                        <figcaption>Gyoza Frita e a Vapor</figcaption>
+                    </figure>
+                    <figure class="prato-card">
+                        <img src="cardapio/assets/fotos-institucional/uramaki.jpg" alt="Uramaki">
+                        <figcaption>Uramaki</figcaption>
+                    </figure>
+                    <figure class="prato-card">
+                        <img src="cardapio/assets/fotos-institucional/chapa-camarao.jpg" alt="Chapa de Camarão na Manteiga">
+                        <figcaption>Chapa de Camarão na Manteiga</figcaption>
+                    </figure>
                 </div>
+                <a href="cardapio/index.html" class="btn-ouro" data-i18n="ver_cardapio_completo">Ver cardápio completo</a>
+            </div>
+        </section>
+        <section id="pedir">
+            <div class="pedir-container" data-slide="right">
+                <h2 data-i18n="como_pedir_titulo">Como pedir</h2>
+                <p class="pedir-texto" data-i18n="como_pedir_texto">Peça online pelo iFood ou 99 Food e receba em casa.</p>
+                <div class="pedir-botoes">
+                    <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/kazay-sushi-vila-madalena/1fb86009-2c34-448e-838c-dcf14e5d6201" target="_blank" rel="noopener" class="pedir-btn" onclick="gtag_saida()">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.428 1.67c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006c4.244 0 7.184-3.854 7.184-6.998 0-2.29-2.175-3.293-4.244-3.293zm11.328 0c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006C21.061 11.96 24 8.107 24 4.963c0-2.29-2.18-3.293-4.244-3.293zm-5.584 12.85 2.435 1.834c-2.17 2.07-6.124 3.525-9.353 3.17A8.913 8.913 0 0 1 .23 14.541H0a9.598 9.598 0 0 0 8.828 7.758c3.814.24 7.323-.905 9.947-3.13l-.004.007 1.08 2.988 1.555-7.623-7.234-.02z" />
+                        </svg>
+                        <span data-i18n="btn_ifood">Peça pelo iFood</span>
+                    </a>
+                    <a href="https://br-pax.onelink.me/MQTu?pid=food_99bPage&deep_link_value=food_99bPage&af_dp=taxis99onetravel://one&af_force_deeplink=true&deep_link_sub1=1582898&deep_link_sub2=5764608501209629085" target="_blank" rel="noopener" class="pedir-btn" onclick="gtag_saida()">
+                        <svg width="24px" height="24px" viewBox="0 0 700 784" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(0,784) scale(0.1,-0.1)">
+                                <path d="M1507 7830 c-523 -66 -976 -352 -1246 -787 -135 -218 -212 -434 -246 -692 -73 -548 141 -1120 557 -1489 170 -151 372 -267 595 -342 65 -22 117 -44 115 -50 -1 -6 -189 -295 -418 -643 -229 -347 -425 -649 -435 -669 -10 -21 -19 -56 -19 -78 0 -51 37 -93 97 -109 28 -8 217 -10 589 -9 l548 3 748 1140 c411 627 772 1187 802 1245 268 519 256 1123 -32 1632 -245 432 -662 731 -1157 828 -124 24 -383 35 -498 20z m336 -1035 c338 -88 539 -451 433 -782 -63 -196 -223 -351 -421 -409 -82 -24 -240 -24 -320 0 -168 50 -310 167 -384 317 -43 87 -71 192 -71 269 0 279 193 534 460 604 73 19 231 20 303 1z" />
+                                <path d="M5090 7825 c-652 -89 -1181 -528 -1390 -1154 -175 -521 -82 -1098 248 -1551 65 -88 212 -242 297 -310 160 -127 364 -237 540 -292 55 -17 104 -34 108 -38 4 -4 -184 -299 -419 -656 -235 -357 -433 -663 -440 -681 -28 -65 -8 -129 49 -160 29 -17 79 -18 602 -21 l570 -2 735 1122 c404 617 757 1160 784 1207 215 373 279 830 175 1253 -52 215 -145 417 -275 599 -80 113 -268 299 -384 381 -352 249 -789 359 -1200 303z m417 -1045 c130 -45 253 -148 326 -271 204 -344 23 -788 -368 -905 -80 -24 -238 -24 -320 0 -139 41 -264 132 -344 252 -207 309 -97 726 237 893 102 51 152 61 287 57 91 -3 135 -9 182 -26z" />
+                                <path d="M6658 2513 l-208 -66 0 -363 0 -362 -69 29 c-114 48 -192 62 -346 63 -172 1 -262 -17 -393 -80 -259 -125 -402 -416 -402 -823 0 -399 137 -689 387 -819 134 -70 209 -86 403 -85 150 0 173 2 253 27 49 14 106 35 128 46 l39 20 0 -50 0 -50 210 0 210 0 0 1290 c0 710 -1 1290 -2 1289 -2 0 -96 -30 -210 -66z m-458 -1134 c148 -69 211 -211 211 -474 0 -219 -38 -337 -137 -423 -66 -59 -127 -77 -254 -77 -99 0 -110 2 -172 33 -134 66 -193 185 -205 413 -15 298 65 479 240 541 79 28 243 21 317 -13z" />
+                                <path d="M130 1165 l0 -1165 210 0 210 0 0 505 0 505 410 0 410 0 0 210 0 210 -410 0 -410 0 0 240 0 240 500 0 500 0 0 210 0 210 -710 0 -710 0 0 -1165z" />
+                                <path d="M2255 1809 c-300 -39 -526 -205 -625 -462 -49 -126 -71 -260 -71 -436 0 -308 66 -510 218 -671 82 -87 154 -136 266 -178 335 -126 772 -57 984 155 161 161 235 378 236 688 0 230 -35 392 -119 544 -54 97 -179 217 -280 269 -167 86 -388 119 -609 91z m299 -410 c70 -13 162 -66 202 -114 80 -98 109 -219 101 -419 -5 -145 -19 -203 -69 -286 -71 -118 -196 -175 -383 -174 -296 2 -430 144 -442 469 -8 203 29 333 118 425 97 100 276 137 473 99z" />
+                                <path d="M4100 1810 c-459 -63 -700 -373 -700 -900 0 -309 73 -524 235 -686 66 -66 98 -89 175 -127 154 -76 304 -104 505 -94 475 24 743 289 787 779 28 298 -36 570 -175 754 -99 131 -248 219 -441 260 -86 19 -297 26 -386 14z m330 -421 c159 -47 247 -171 271 -384 18 -162 -12 -333 -74 -431 -47 -75 -126 -130 -217 -152 -186 -45 -375 -9 -478 91 -93 89 -127 197 -127 397 0 207 36 314 135 403 109 98 310 130 490 76z" />
+                            </g>
+                        </svg>
+                        <span data-i18n="btn_99food">Peça no 99 Food</span>
+                    </a>
+                </div>
+                <p class="pedir-nota" data-i18n="como_pedir_nota">Entrega na Vila Madalena e região · (11) 3034-5582</p>
+            </div>
+        </section>
+        <section id="sobre" class="ramo_direita">
+            <div class="sobre-container" data-slide="left">
+                <p class="sobre-label" data-i18n="sobre_label">Desde 2019</p>
+                <div class="sobre-texto">
+                    <p data-i18n="sobre_p1">O Kazay nasceu em 2019 na Vila Madalena com uma missão teimosa: provar que comida japonesa tem gosto.</p>
+                    <p data-i18n="sobre_p2">Cada prato é montado no dia, com peixe fresco e técnica de verdade — do niguiri ao temaki. É o japa que faz até quem nunca gostou voltar para pedir de novo.</p>
+                </div>
+                <h3 class="sobre-alerta" data-i18n-html="sobre_h3">Alerta a todos os que não gostam de japa:<br>Cuidado, não venham ao Kazay Sushi!<br>! ! <span class="text_span">Pois se vier é perigoso se apaixonar 😏</span> ! !</h3>
+            </div>
+            <!-- Carrossel contínuo: a lista repete 2x e o trilho anda -50% (loop sem costura, CSS puro).
+                 Fora da .sobre-container p/ ocupar a largura total do viewport em telas grandes -->
+            <div class="sobre-faixa" aria-hidden="true">
+                <div class="sobre-faixa-trilho">
+                        <img src="cardapio/assets/fotos-institucional/chapa-shimeji.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/hossomaki.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/jhow-limao-siciliano.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/komb-submarino.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/temaki-atum-space.jpg" alt="">
+                        <img src="cardapio/assets/capas/komb-kazay24.jpg" alt="">
+                        <img src="cardapio/assets/capas/jyo-trufado.jpg" alt="">
+                        <img src="cardapio/assets/capas/komb-premium.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/chapa-shimeji.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/hossomaki.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/jhow-limao-siciliano.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/komb-submarino.jpg" alt="">
+                        <img src="cardapio/assets/fotos-institucional/temaki-atum-space.jpg" alt="">
+                        <img src="cardapio/assets/capas/komb-kazay24.jpg" alt="">
+                        <img src="cardapio/assets/capas/jyo-trufado.jpg" alt="">
+                        <img src="cardapio/assets/capas/komb-premium.jpg" alt="">
+                    </div>
             </div>
         </section>
     </main>
@@ -151,20 +213,23 @@
                                             fill="#fff" />
                                     </svg>
                                 </a></li>
-                            <li class="whatsapp"><a
-                                    href="https://wa.me/5511984085182"
-                                    target="_blank">
-                                    <svg width="28" height="28" viewBox="-3 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                        preserveAspectRatio="xMinYMin" class="jam jam-whatsapp">
-                                        <path
-                                            d="M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27 7.77 7.77 0 0 1-3.474-.808l-.701-.347-3.087.726.65-3.131-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z" />
-                                        <path
-                                            d="m14.842 12.045-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903-.137 1.343.443 3.036 2.637 5.07 2.535 2.349 4.566 2.66 5.887 2.341.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072z" />
+                            <li class="food99"><a
+                                    href="https://br-pax.onelink.me/MQTu?pid=food_99bPage&deep_link_value=food_99bPage&af_dp=taxis99onetravel://one&af_force_deeplink=true&deep_link_sub1=1582898&deep_link_sub2=5764608501209629085"
+                                    target="_blank" rel="noopener" onclick="gtag_saida()">
+                                    <svg width="24px" height="24px" viewBox="0 0 700 784" xmlns="http://www.w3.org/2000/svg">
+                                        <g transform="translate(0,784) scale(0.1,-0.1)">
+                                            <path d="M1507 7830 c-523 -66 -976 -352 -1246 -787 -135 -218 -212 -434 -246 -692 -73 -548 141 -1120 557 -1489 170 -151 372 -267 595 -342 65 -22 117 -44 115 -50 -1 -6 -189 -295 -418 -643 -229 -347 -425 -649 -435 -669 -10 -21 -19 -56 -19 -78 0 -51 37 -93 97 -109 28 -8 217 -10 589 -9 l548 3 748 1140 c411 627 772 1187 802 1245 268 519 256 1123 -32 1632 -245 432 -662 731 -1157 828 -124 24 -383 35 -498 20z m336 -1035 c338 -88 539 -451 433 -782 -63 -196 -223 -351 -421 -409 -82 -24 -240 -24 -320 0 -168 50 -310 167 -384 317 -43 87 -71 192 -71 269 0 279 193 534 460 604 73 19 231 20 303 1z" />
+                                            <path d="M5090 7825 c-652 -89 -1181 -528 -1390 -1154 -175 -521 -82 -1098 248 -1551 65 -88 212 -242 297 -310 160 -127 364 -237 540 -292 55 -17 104 -34 108 -38 4 -4 -184 -299 -419 -656 -235 -357 -433 -663 -440 -681 -28 -65 -8 -129 49 -160 29 -17 79 -18 602 -21 l570 -2 735 1122 c404 617 757 1160 784 1207 215 373 279 830 175 1253 -52 215 -145 417 -275 599 -80 113 -268 299 -384 381 -352 249 -789 359 -1200 303z m417 -1045 c130 -45 253 -148 326 -271 204 -344 23 -788 -368 -905 -80 -24 -238 -24 -320 0 -139 41 -264 132 -344 252 -207 309 -97 726 237 893 102 51 152 61 287 57 91 -3 135 -9 182 -26z" />
+                                            <path d="M6658 2513 l-208 -66 0 -363 0 -362 -69 29 c-114 48 -192 62 -346 63 -172 1 -262 -17 -393 -80 -259 -125 -402 -416 -402 -823 0 -399 137 -689 387 -819 134 -70 209 -86 403 -85 150 0 173 2 253 27 49 14 106 35 128 46 l39 20 0 -50 0 -50 210 0 210 0 0 1290 c0 710 -1 1290 -2 1289 -2 0 -96 -30 -210 -66z m-458 -1134 c148 -69 211 -211 211 -474 0 -219 -38 -337 -137 -423 -66 -59 -127 -77 -254 -77 -99 0 -110 2 -172 33 -134 66 -193 185 -205 413 -15 298 65 479 240 541 79 28 243 21 317 -13z" />
+                                            <path d="M130 1165 l0 -1165 210 0 210 0 0 505 0 505 410 0 410 0 0 210 0 210 -410 0 -410 0 0 240 0 240 500 0 500 0 0 210 0 210 -710 0 -710 0 0 -1165z" />
+                                            <path d="M2255 1809 c-300 -39 -526 -205 -625 -462 -49 -126 -71 -260 -71 -436 0 -308 66 -510 218 -671 82 -87 154 -136 266 -178 335 -126 772 -57 984 155 161 161 235 378 236 688 0 230 -35 392 -119 544 -54 97 -179 217 -280 269 -167 86 -388 119 -609 91z m299 -410 c70 -13 162 -66 202 -114 80 -98 109 -219 101 -419 -5 -145 -19 -203 -69 -286 -71 -118 -196 -175 -383 -174 -296 2 -430 144 -442 469 -8 203 29 333 118 425 97 100 276 137 473 99z" />
+                                            <path d="M4100 1810 c-459 -63 -700 -373 -700 -900 0 -309 73 -524 235 -686 66 -66 98 -89 175 -127 154 -76 304 -104 505 -94 475 24 743 289 787 779 28 298 -36 570 -175 754 -99 131 -248 219 -441 260 -86 19 -297 26 -386 14z m330 -421 c159 -47 247 -171 271 -384 18 -162 -12 -333 -74 -431 -47 -75 -126 -130 -217 -152 -186 -45 -375 -9 -478 91 -93 89 -127 197 -127 397 0 207 36 314 135 403 109 98 310 130 490 76z" />
+                                        </g>
                                     </svg>
                                 </a></li>
                             <li class="ifood"><a
                                     href="https://www.ifood.com.br/delivery/sao-paulo-sp/kazay-sushi-vila-madalena/1fb86009-2c34-448e-838c-dcf14e5d6201"
-                                    target="_blank">
+                                    target="_blank" onclick="gtag_saida()">
                                     <svg width="24px" height="24px" viewBox="0 0 24 24" role="img"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
