@@ -1,29 +1,9 @@
 /*1024-1199 */
 @media (max-width: 74.99rem) {
-    #first{
-        background-image: url(../assets/wallpapaer-kazay-responsivity.png)center center;
-    }
-    .second_container{
-        width: 55rem;
-        padding: .1rem 2rem;
-    }
-    .display_container{
-        height: 21rem;
-    }
-    .display_container div {
-        height: 20.5rem;
-    }
-
     .contacts_container{
         width: 60%;
     }
 
-    /*----------------------------------------*/
-    .third_container{
-        width: 55rem;
-        padding: .1rem 2rem;
-    }
-    /*----------------------------------------*/
     .up_contacts_container{
         width: 60rem;
     }
@@ -37,44 +17,17 @@
     .menu{
         justify-content: space-evenly;
     }
-    .second_container{
-        width: 45rem;
-        padding: .1rem 2rem;
+    #pratos,#pedir,#sobre{
+        padding:4.5rem 0;
     }
-    .display_container{
-        height: 17.5rem;
-    }
-    .display_container div {
-        height: 17rem;
-        background-color: rgba(13, 10, 8, .55);
-    }
-    .display_container div p{
-        display: flex;
-    }
-    .display_container div:hover {
-        pointer-events: none;
-        transform: none;
-    }
-    .display_container div:hover img{
-        pointer-events: none;
-        transform: none;
-    }
-    .display_container div:hover p{
-        pointer-events: none;
-        transform: none;
-        animation: none;
+    .pratos-grade{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .contacts_container{
         width: 60%;
     }
 
-    /*----------------------------------------*/
-    .third_container{
-        width: 45rem;
-        padding: .1rem 2rem;
-    }
-    /*----------------------------------------*/
     .up_contacts_container{
         width: 45rem;
     }
@@ -94,51 +47,12 @@
     [data-slide="left"]{
         transform: translate3d(-1rem,0,0);
     }
-    
-    #first{
-        background: url(../assets/wallpapaer-kazay-mobile.jpg) center center no-repeat;
-        background-size: cover;
-    }
 
-    #second{
-        height: auto;
-        padding: 2rem 0;
+    #pratos,#pedir,#sobre{
+        padding:4rem 0;
     }
-    .second_container{
-        width: 26rem;
-        height: auto;
-        padding: 1rem 1.5rem;
-        gap: 2rem;
-        border-radius: 2rem;
-    }
-    .display_container{
-        height: 68rem;
-        flex-direction: column;
-    }
-    .display_container div {
-        width: 80%;
-        height: 22.5rem;
-        background-color: rgba(13, 10, 8, .55);
-    }
-    .display_container div img{
-        border-radius: 1rem ;
-        transition: .3s;
-        z-index: 1;
-    }
-
-    /*----------------------------------------*/
-    #third{
-        height: auto;
-        padding: 2rem 0;
-    }
-    .third_container{
-        width: 26rem;
-        padding: 1rem 1.5rem;
-        gap: 2rem;
-        border-radius: 2rem;
-    }
-    .text_container_1{
-        flex-direction: column;
+    .hero-conteudo{
+        gap:1.1rem;
     }
     /*----------------------------------------*/
     .up_contacts_container{
@@ -171,11 +85,7 @@
     }
 }
 @media (max-width: 29.99rem) {
-    #first{
-        background: url(../assets/wallpapaer-kazay-mobile-360p.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
+
 h1 {
     font-size: 2.5rem;
 }
@@ -191,21 +101,12 @@ h3 {
 p {
     font-size: 1.3rem;
 }
-.second_container{
-    width: 20rem;
-    padding: 1rem;
+.pedir-botoes{
+    flex-direction:column;
+    align-items:stretch;
 }
-.second_container h1{
-    text-align: center;
-}
-.display_container div {
-    width: 100%;
-    height: 22.5rem;
-    background-color: rgba(13, 10, 8, .55);
-}
-.third_container{
-    width: 20rem;
-    padding: 1rem;
+.pedir-btn{
+    justify-content:center;
 }
 .up_contacts_container{
     width: 20rem;
