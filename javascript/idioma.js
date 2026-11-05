@@ -1,5 +1,5 @@
 /* ============================================================
-   KAZAY SUSHI — Idioma do index (PT/EN/FR/DE/KO/JA)
+   KAZAY SUSHI — Idioma do index (PT/EN/ES/FR/DE/KO/JA)
    Sincronizado com o cardápio pela chave localStorage
    "kazay-idioma": a escolha persiste entre as páginas e é
    aplicada ao vivo nos outros tabs abertos (evento storage).
@@ -7,7 +7,7 @@
    impressos no cardápio.
    ============================================================ */
 
-const IDIOMAS = ["pt", "en", "fr", "de", "ko", "ja"];
+const IDIOMAS = ["pt", "en", "es", "fr", "de", "ko", "ja"];
 let idioma = localStorage.getItem("kazay-idioma") || "pt";
 if (!IDIOMAS.includes(idioma)) idioma = "pt";
 
@@ -32,6 +32,27 @@ const TR = {
     sobre_p2: "Every dish is built fresh on the day, with fresh fish and real technique — from nigiri to temaki. It's the kind of japa that makes even lifelong skeptics come back for more.",
     sobre_h3: 'A warning to all who don\'t like Japanese food:<br>Be careful — don\'t come to Kazay Sushi!<br>! ! <span class="text_span">Because once you\'re here, falling in love is dangerous 😏</span> ! !',
     credit: "Designed and created by Christian Lelis"
+  },
+  es: {
+    nav_home: "Inicio",
+    nav_cardapio: "Menú",
+    nav_sobre: "Nosotros",
+    nav_contatos: "Contacto",
+    nav_pedir: "Pedir",
+    hero_tagline: "Aquí, la comida japonesa tiene sabor.",
+    mais_pedidos: "Los más pedidos",
+    ver_cardapio: "Ver el menú",
+    ver_cardapio_completo: "Ver el menú completo",
+    como_pedir_titulo: "Cómo pedir",
+    como_pedir_texto: "Pide en línea por iFood o 99 Food y recíbelo en tu puerta.",
+    btn_ifood: "Pedir en iFood",
+    btn_99food: "Pedir en 99 Food",
+    como_pedir_nota: "Entrega en Vila Madalena y alrededores · (11) 3034-5582",
+    sobre_label: "Desde 2019",
+    sobre_p1: "Kazay nació en Vila Madalena en 2019 con una misión terca: demostrar que la comida japonesa tiene sabor.",
+    sobre_p2: "Cada plato se arma el mismo día, con pescado fresco y técnica de verdad — del nigiri al temaki. Es el japa que hace volver incluso a los escépticos de toda la vida.",
+    sobre_h3: 'Una advertencia para todos los que no les gusta la comida japonesa:<br>Cuidado — ¡no vengas a Kazay Sushi!<br>! ! <span class="text_span">Porque una vez aquí, enamorarse es peligroso 😏</span> ! !',
+    credit: "Diseñado y creado por Christian Lelis"
   },
   fr: {
     nav_home: "Accueil",
