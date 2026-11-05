@@ -54,18 +54,33 @@ button{background:none;border:none;cursor:pointer}
 
 /* ---------- Cards de experiência (clicáveis) ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:2rem;padding:6rem 6vw}
-.card{border:1px solid var(--linha);background:rgba(244,240,233,.02);cursor:pointer;transition:border-color .3s,transform .3s}
+.card{border:1px solid var(--linha);background:rgba(244,240,233,.02);cursor:pointer;position:relative;transition:border-color .3s,transform .3s}
 .card:hover{border-color:rgba(201,162,107,.55)}
+/* Elevação + zoom na foto só em dispositivos com hover real (desktop) */
+@media(hover:hover){
+  .card:hover{transform:translateY(-4px)}
+  .card:hover .card-fotos img{transform:scale(1.03)}
+}
 .card:focus-visible{outline:1px solid var(--dourado);outline-offset:3px}
 .card.ativo{border-color:var(--dourado)}
+/* Pista permanente de "toque para abrir" (touch não tem hover): chip dourado
+   no canto da foto; vira × quando a seção está aberta */
+.card::after{content:"+";position:absolute;top:1rem;right:1rem;z-index:2;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border:1px solid rgba(201,162,107,.6);background:rgba(13,10,8,.55);backdrop-filter:blur(4px);color:var(--dourado);font-size:1.3rem;font-weight:400;line-height:1;transition:border-color .3s}
+.card.ativo::after{content:"\00D7";border-color:var(--dourado)}
 /* Capa do card: fotos empilhadas em crossfade (mesmo padrão da institucional) */
 .card-fotos{position:relative;aspect-ratio:4/3;overflow:hidden;background:rgba(244,240,233,.04)}
-.card-fotos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease}
+.card-fotos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease,transform .8s ease}
 .card-fotos img.ativa{opacity:1}
 .card-corpo{padding:2rem 2.2rem 2.4rem}
 .card h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.1rem;margin-bottom:.7rem}
 .card p{color:var(--cinza);font-size:.95rem;max-width:26rem}
-.dica{display:inline-block;margin-top:1.4rem;color:var(--dourado);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--linha);padding-bottom:4px}
+/* "Ver o menu completo" como CTA de contorno (mesma família dos .btn do hero) —
+   no mobile vira botão full-width p/ ficar impossível não notar */
+.dica{display:inline-flex;align-items:center;margin-top:1.5rem;padding:.8rem 1.4rem;border:1px solid rgba(201,162,107,.5);color:var(--dourado);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;text-align:center;transition:border-color .3s,background-color .3s}
+/* Seta fora do texto (via CSS) para nunca ficar órfã sozinha em linha 2 */
+.dica::after{content:"\2192";margin-left:.55em}
+@media(hover:hover){.card:hover .dica{border-color:var(--dourado);background:rgba(201,162,107,.1)}}
+.card.ativo .dica{border-color:var(--dourado);background:rgba(201,162,107,.1)}
 
 /* ---------- Seções de menu (ocultas até o clique) ---------- */
 .oculta{display:none}
@@ -156,6 +171,11 @@ button{background:none;border:none;cursor:pointer}
   .sel-idioma-menu li img{width:1.2rem;height:.8rem}
   .tagline{letter-spacing:.3em;font-size:.62rem}
   .bloco-premium{margin-top:3rem;padding:2.2rem 1.6rem}
+  /* Mobile: CTA full-width — a principal pista de que o card é tocável.
+     Tracking/fonte levemente menores p/ caber em 1 linha até ~360px */
+  .dica{width:100%;justify-content:center;font-size:.72rem;letter-spacing:.12em}
+  /* Telas bem estreitas (<390): sem seta — o chip "+" já indica o toque */
+  @media(max-width:389px){.dica::after{display:none}}
   .institucional{min-height:auto}
   .institucional-texto{padding:4.5rem 6vw}
   .bloco-premium + .bloco{margin-top:4rem}

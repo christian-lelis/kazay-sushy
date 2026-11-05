@@ -3,7 +3,7 @@
 const $ = (sel) => document.querySelector(sel);
 
 /* ---------- Idioma (PT padrão; a escolha persiste no navegador) ---------- */
-const IDIOMAS = ["pt", "en", "fr", "de", "ko", "ja"];
+const IDIOMAS = ["pt", "en", "es", "fr", "de", "ko", "ja"];
 let idioma = localStorage.getItem("kazay-idioma") || "pt";
 if (!IDIOMAS.includes(idioma)) idioma = "pt";
 
