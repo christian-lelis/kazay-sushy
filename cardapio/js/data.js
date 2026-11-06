@@ -25,16 +25,18 @@ const CARDAPIO = {
     tradicional: {
       frios: [
         { n: "Carpaccio de Salmão", f: "carpaccio-salmao-chef" },
-        { n: "Jow Frico César", f: "jyo-chico-cesar" },
+        { n: "Ceviche", f: "ceviche" }, // carpaccio voltou para a frente do ceviche (pedido do cliente)
+        { n: "Sunomono", f: "sunomono" },
+        { n: "Hot Roll Tradicional", f: "hot-roll" }, // na frente do Jow Chico César (pedido do cliente)
+        { n: "Jow Chico César", f: "jyo-chico-cesar" },
         { n: "Jow de Limão Siciliano", f: "jhow-limao-siciliano" },
         { n: "Jow de Maracujá", f: "jhow-maracuja" },
         { n: "Hossomakis", f: "hossomaki" },
         { n: "Uramakis", f: "uramaki" },
-        { n: "Niguiris e Sashimis de salmão e atum", f: "niguiri-salmao-10un" },
+        { n: "Niguiris", f: "niguiri-salmao-10un" }, // divididos em dois itens (pedido do cliente)
+        { n: "Sashimis", f: "sashimi-salmao-10un" },
         { n: "Tataki", f: "sashimi-tataki" },
-        { n: "Ceviche", f: "ceviche" },
-        { n: "Sunomono", f: "sunomono" },
-        { n: "Duplas (exceto Polvo)", f: "dupla-salmao" },
+        { n: "Dupla de Sashimi", f: "dupla-salmao", oculto: true }, // oculta por enquanto (pedido do cliente); ex-"Duplas (exceto Polvo)" — para reativar, tirar o flag
         /* Fazem parte do rodízio, mas não têm foto — ficam no fim do grupo */
         { n: "Camarão empanado", top: true },
         { n: "Lula empanada", top: true }
@@ -46,7 +48,6 @@ const CARDAPIO = {
         { n: "Salmão Grelhado", f: "temaki-grelhado" },
         { n: "Salmão Spice", f: "temaki-salmao-simples" },
         { n: "Especial Kazay" },
-        { n: "Do Chef" },
         { n: "Atum Completo", f: "temaki-atum-completo" },
         { n: "Atum Simples", f: "temaki-atum-simples" },
         { n: "Zen Maki" },
@@ -62,7 +63,6 @@ const CARDAPIO = {
         /* Top sellers à frente (lista do cliente) */
         { n: "Gyoza Frita e a Vapor", f: "guioza-frita", top: true },
         { n: "Harumaki", f: "harumaki", top: true },
-        { n: "Hot Roll Tradicional", f: "hot-roll" },
         { n: "Camarão na Manteiga", f: "chapa-camarao" },
         { n: "Shimeji na Manteiga", f: "chapa-shimeji" },
         { n: "Gohan", f: "gohan" },
@@ -83,6 +83,7 @@ const CARDAPIO = {
       { n: "Tempurá de Camarão", f: "tempura-camarao", oculto: true }, // oculto por enquanto (pedido do cliente) — segue no à la carte
       { n: "Yakissoba de Filé Mignon", f: "yakissoba-file-mignon" },
       { n: "Temaki de Camarão e Empanado", f: "temaki-ebi" },
+      { n: "Temaki do Chef" }, // ex-"Do Chef"; movido do tradicional e renomeado (pedido do cliente)
       { n: "Sashimi na Pedra de Sal" },
       { n: "Hot Roll Especial" }
     ]
@@ -96,7 +97,7 @@ const CARDAPIO = {
       { n: "Chapa de Shimeji", p: "52,3", f: "chapa-shimeji" },
       { n: "Tempurá de Camarão", p: "82,99", f: "tempura-camarao" },
       { n: "Tempurá de Legumes", p: "67,76", f: "tempura-legumes" },
-      { n: "Jow Frico César", p: "51,9", d: "(10 unidades)", f: "jyo-chico-cesar" },
+      { n: "Jow Chico César", p: "51,9", d: "(10 unidades)", f: "jyo-chico-cesar" },
       { n: "Carpaccio de Salmão", p: "103,99", d: "(com azeite trufado e flor de sal)", f: "carpaccio-salmao-trufado" },
       { n: "Gyoza Frita ou Vapor", p: "30,4", d: "(6 pastéis recheados com carne bovina)", f: "guioza-frita" },
       { n: "Ceviche", p: "71,99", d: "(salmão em marinado especial do Kazay)", f: "ceviche" },
