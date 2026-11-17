@@ -12,12 +12,12 @@ const CARDAPIO = {
   rodizio: {
     planos: [
       { periodo: "Almoço · Segunda a Sexta", itens: [
-        { n: "Rodízio", p: "99,99" },
-        { n: "c/ Camarão", p: "104,99" }
+        { n: "Rodízio", p: "104,99" },
+        { n: "c/ Camarão", p: "109,99" }
       ]},
       { periodo: "Sábados, Domingos, Feriados e Jantar", itens: [
-        { n: "Rodízio c/ Camarão e Lula empanada", p: "114,99" },
-        { n: "Rodízio Premium", p: "149,9" }
+        { n: "Rodízio c/ Camarão e Lula empanada", p: "119,99" },
+        { n: "Rodízio Premium", p: "159,99" }
       ]}
     ],
 
@@ -209,19 +209,19 @@ const CARDAPIO = {
 
   bebidas: [
     { titulo: "Não Alcoólicas", itens: [
-      { n: "Água com ou sem gás", p: "9,99" },
-      { n: "Refrigerantes", p: "12,99" },
+      { n: "Água com ou sem gás", p: "10,99" },
+      { n: "Refrigerantes", p: "13,99" },
       { n: "Café", p: "9,9" },
       { n: "Italian Soda — Kaly", p: "29,99" },
-      { n: "Chás", p: "13,99" },
-      { n: "Sucos", p: "15" },
+      { n: "Chás", p: "15,99" },
+      { n: "Sucos", p: "16,99" },
       { n: "Sucos viagem", p: "22,99" },
-      { n: "H2O e Citrus", p: "13,99" }
+      { n: "H2O e Citrus", p: "15,99" }
     ]},
     /* Alcoólicas divididas em subgrupos (pedido do cliente); top sellers à frente de cada grupo */
     { titulo: "Cervejas", itens: [
-      { n: "Cervejas Heineken", p: "16,89", top: true },
-      { n: "Cervejas (Stella e Budweiser)", p: "15,99" },
+      { n: "Cervejas Heineken", p: "17,99", top: true },
+      { n: "Cervejas (Stella e Budweiser)", p: "16,99" },
       { n: "Cerveja Baden Baden", p: "31,3" }
     ]},
     { titulo: "Vinhos & Espumantes", itens: [
@@ -230,7 +230,7 @@ const CARDAPIO = {
       { n: "Taça de Espumante", p: "36,9" }
     ]},
     { titulo: "Saquês", itens: [
-      { n: "Saquê Nacional (dose)", p: "26,99", top: true },
+      { n: "Saquê Nacional (dose)", p: "27,99", top: true },
       { n: "Saquêzinha Nacional", p: "39,99" },
       { n: "Garrafa de Saquê Nacional", p: "87,9" },
       { n: "Garrafa de Saquê Importado", p: "242" }
